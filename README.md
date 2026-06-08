@@ -25,3 +25,30 @@ Structure
     scripts/    ETL and data quality Python scripts
     outputs/    cleaned data and audit reports
     docs/       process documentation
+
+Results
+
+Running the full pipeline produces two outputs:
+
+- `outputs/planning_applications_clean.csv` — cleaned dataset 
+  ready for analysis or Power BI import
+- `outputs/data_quality_report.txt` — audit summary with issues flagged
+
+Data quality summary
+
+| Check | Result |
+|-------|--------|
+| Missing values | Minor — 56 missing decisions (0.13%) |
+| Duplicate rows | None |
+| Negative values | None |
+| Decision anomalies | 237 rows flagged for review |
+| Coverage | 30 years, 10 regions, 462 local authorities |
+
+Full process documented in [docs/etl_process.md](docs/etl_process.md)
+
+How to run
+
+```
+python scripts/etl_pipeline.py
+python scripts/data_quality_audit.py
+```
