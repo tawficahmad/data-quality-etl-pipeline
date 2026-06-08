@@ -1,0 +1,15 @@
+DATA QUALITY AUDIT REPORT
+Run time: 2026-06-09 00:33:03
+============================================================
+Total rows: 42,226
+Missing values:
+                     missing_count  missing_pct
+apps_received                    2         0.00
+apps_decided                    56         0.13
+apps_withdrawn                   2         0.00
+enforcement_notices              4         0.01
+Duplicate rows: 0
+Anomalies (decisions > 150% received): 237
+Checks run: 6
+Issues flagged: 2
+Status: REVIEW NEEDED
